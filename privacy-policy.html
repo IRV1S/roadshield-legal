@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RoadShield — Политика конфиденциальности</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #ffffff;
+    --fg: #1a1a1a;
+    --muted: #5a5a5a;
+    --accent: #2f6fed;
+    --card: #f5f6f8;
+    --border: #e2e4e8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14161a;
+      --fg: #eef0f2;
+      --muted: #a3a8b0;
+      --accent: #6ea0ff;
+      --card: #1d2025;
+      --border: #2a2d33;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 32px 20px 64px;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+  }
+  .logo {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: white;
+    flex-shrink: 0;
+  }
+  h1 {
+    font-size: 22px;
+    margin: 0;
+  }
+  .revision {
+    color: var(--muted);
+    font-size: 13px;
+    margin: 0 0 28px;
+  }
+  h2 {
+    font-size: 16px;
+    margin: 32px 0 10px;
+  }
+  p, li {
+    font-size: 15px;
+  }
+  ul {
+    margin: 8px 0;
+    padding-left: 22px;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin: 24px 0;
+  }
+  a { color: var(--accent); }
+  footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 13px;
+  }
+  .lang-note {
+    font-size: 13px;
+    color: var(--muted);
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="logo">RS</div>
+  <h1>RoadShield</h1>
+</header>
+<p class="revision">Политика конфиденциальности · Редакция от 18.07.2026</p>
+
+<p class="lang-note">Полный текст также доступен внутри приложения на русском, казахском, английском и китайском языках (Профиль → Настройки → Политика конфиденциальности).</p>
+
+<h2>1. Какие данные мы обрабатываем</h2>
+<ul>
+  <li>Имя, номер авто и VIN — вводятся вами вручную в профиле.</li>
+  <li>Доверенные контакты (имя и номер телефона) — для отправки SOS-SMS.</li>
+  <li>Геолокация — включается только при записи видео или отправке SOS; координаты добавляются к метаданным записи и SMS.</li>
+  <li>Аудио и видео — сохраняются локально на вашем устройстве; никуда не передаются.</li>
+  <li>История остановок и статистика — хранятся локально в зашифрованном хранилище.</li>
+  <li>Email, имя и фото профиля Google — только если вы вошли в аккаунт (см. раздел 5).</li>
+</ul>
+
+<h2>2. Как мы храним данные</h2>
+<p>Все данные хранятся исключительно на вашем устройстве с использованием Android Keystore и Encrypted DataStore. Мы не имеем собственных серверов и не передаём ваши данные третьим лицам, кроме сервисов из раздела 5.</p>
+<p>Видеозаписи защищены SHA-256 хэшом и цифровой подписью (EC P-256), что гарантирует целостность файла.</p>
+
+<h2>3. Доступ к данным</h2>
+<p>Приложение запрашивает следующие разрешения:</p>
+<ul>
+  <li><code>CAMERA</code>, <code>RECORD_AUDIO</code> — для видео/аудиозаписи.</li>
+  <li><code>ACCESS_FINE_LOCATION</code> — для добавления координат к SOS-сообщению.</li>
+  <li><code>CALL_PHONE</code> — для набора номеров 102 и 112.</li>
+  <li><code>READ_MEDIA_VIDEO</code> — для отображения записей из галереи (Android 13+).</li>
+</ul>
+<p>Отправка SOS открывает штатное SMS-приложение с уже заполненными получателями и текстом — само приложение SMS не отправляет и не запрашивает для этого отдельное разрешение.</p>
+<p>Каждое разрешение запрашивается в момент использования функции, а не при установке.</p>
+
+<h2>4. Соответствие Закону РК №94-V</h2>
+<ul>
+  <li>Биометрические данные (отпечаток пальца, Face ID) не хранятся — используется только системный BiometricPrompt.</li>
+  <li>Вы вправе в любой момент удалить все свои локальные данные через приложение (Настройки → Удалить все данные).</li>
+  <li>Если вы вошли в аккаунт, вы также вправе полностью удалить сам аккаунт (Профиль → Удалить аккаунт) — это необратимо удаляет ваш email/Google-профиль с серверов Firebase вместе со всеми локальными данными.</li>
+  <li>Сбор данных осуществляется только с вашего явного согласия (через запросы разрешений ОС).</li>
+</ul>
+
+<h2>5. Сторонние сервисы</h2>
+<ul>
+  <li><strong>Google Play Billing</strong> — для обработки подписок. Google может получать данные транзакции согласно своей политике конфиденциальности.</li>
+  <li><strong>Firebase Authentication</strong> — при входе в аккаунт (Google или email/пароль) обрабатывает email, имя и уникальный идентификатор пользователя на серверах Google/Firebase.</li>
+  <li><strong>Firebase Crashlytics</strong> — включается только по вашему согласию в настройках; при включении собирает отчёты о сбоях приложения.</li>
+  <li><strong>mybuh.kz</strong> — один сетевой запрос для получения актуального значения МРП (не чаще 1 раза в 30 дней). Личные данные не передаются.</li>
+</ul>
+
+<div class="card">
+  <h2 style="margin-top:0">Удаление данных и аккаунта</h2>
+  <p>Удалить локальные данные (профиль, контакты, историю, статистику) можно в любой момент внутри приложения: <strong>Настройки → Удалить все данные</strong>.</p>
+  <p>Если вы зарегистрированы в приложении (email или Google), вы можете полностью удалить аккаунт и все связанные с ним данные: <strong>Профиль → Удалить аккаунт</strong>. Действие необратимо.</p>
+</div>
+
+<h2>6. Контакт</h2>
+<p>По вопросам обработки персональных данных: <a href="mailto:contactroadshield@gmail.com">contactroadshield@gmail.com</a></p>
+
+<footer>
+  RoadShield — приложение для защиты прав водителей Республики Казахстан.
+</footer>
+
+</div>
+</body>
+</html>
