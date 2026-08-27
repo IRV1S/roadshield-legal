@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RoadShield — Удаление аккаунта и данных</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #ffffff;
+    --fg: #1a1a1a;
+    --muted: #5a5a5a;
+    --accent: #2f6fed;
+    --card: #f5f6f8;
+    --border: #e2e4e8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14161a;
+      --fg: #eef0f2;
+      --muted: #a3a8b0;
+      --accent: #6ea0ff;
+      --card: #1d2025;
+      --border: #2a2d33;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 32px 20px 64px;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+  }
+  .logo {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: white;
+    flex-shrink: 0;
+  }
+  h1 {
+    font-size: 22px;
+    margin: 0;
+  }
+  .revision {
+    color: var(--muted);
+    font-size: 13px;
+    margin: 0 0 28px;
+  }
+  h2 {
+    font-size: 16px;
+    margin: 32px 0 10px;
+  }
+  h3 {
+    font-size: 15px;
+    margin: 20px 0 6px;
+  }
+  p, li {
+    font-size: 15px;
+  }
+  ul {
+    margin: 8px 0;
+    padding-left: 22px;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin: 24px 0;
+  }
+  a { color: var(--accent); }
+  footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 13px;
+  }
+  .lang-note {
+    font-size: 13px;
+    color: var(--muted);
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="logo">RS</div>
+  <h1>RoadShield</h1>
+</header>
+<p class="revision">Удаление аккаунта и данных · Редакция от 27.08.2026</p>
+
+<p class="lang-note">Эта страница описывает, как удалить аккаунт RoadShield (пакет <code>kz.rightsdriver.app</code>) и связанные с ним данные. Полная Политика конфиденциальности — <a href="privacy-policy.html">здесь</a>. English summary is at the bottom of this page.</p>
+
+<h2>1. Удаление аккаунта внутри приложения (рекомендуемый способ)</h2>
+<ol>
+  <li>Откройте приложение RoadShield и войдите в аккаунт, если вы вышли из него.</li>
+  <li>Перейдите: <strong>Профиль → Удалить аккаунт</strong>.</li>
+  <li>Подтвердите личность — повторно войдите через Google или введите пароль от аккаунта.</li>
+  <li>Нажмите <strong>«Удалить»</strong>. Удаление выполняется сразу и необратимо.</li>
+</ol>
+<p>Если наш сервер в этот момент недоступен, не удаляется ничего — приложение покажет ошибку, данные останутся целы, и удаление можно повторить позже.</p>
+
+<h2>2. Удаление аккаунта без доступа к приложению</h2>
+<p>Если приложение удалено, телефон утерян или войти не получается, отправьте запрос с адреса электронной почты, привязанного к аккаунту, на <a href="mailto:contactroadshield@gmail.com?subject=Удаление%20аккаунта%20RoadShield">contactroadshield@gmail.com</a> с темой «Удаление аккаунта RoadShield». Если аккаунт был создан через Google, напишите с того же Google-адреса.</p>
+<p>Мы удалим аккаунт и связанные с ним данные <strong>не позднее 30 календарных дней</strong> с момента получения запроса и подтвердим удаление ответным письмом. Для проверки, что запрос исходит от владельца аккаунта, мы можем попросить подтвердить его с привязанного адреса; никаких дополнительных документов не требуется.</p>
+
+<h2>3. Что удаляется</h2>
+<ul>
+  <li>На нашем сервере (Республика Казахстан): профиль, отображаемое имя и фотография профиля, друзья, заявки и блокировки, отправленные и полученные «Спасибо», созданные вами метки на карте, показатели «Дорожного Стажа», настройки приватности, переписка с «Автоадвокатом», журнал согласий, резервные копии истории остановок и доверенных контактов, облачные копии видеозаписей и PDF-жалоб.</li>
+  <li>В Firebase Authentication (Google): ваш email или привязанный Google-профиль и идентификатор пользователя.</li>
+  <li>На устройстве (при удалении из приложения): профиль, доверенные контакты, история остановок, локальные настройки и кэш.</li>
+</ul>
+<p>Удаление необратимо: восстановить эти данные мы не сможем. Облачные копии видеозаписей — это ваши доказательства; если они ещё нужны, сохраните их перед удалением.</p>
+
+<h2>4. Что не удаляется и почему</h2>
+<ul>
+  <li><strong>Обезличенная статистика</strong> — сведения, которые невозможно связать с вами (см. раздел 8 Политики конфиденциальности).</li>
+  <li><strong>Запись о покупке Premium</strong> — не удаляется, а отвязывается от аккаунта, чтобы один и тот же чек нельзя было применить повторно на другом аккаунте; сведений о вас в ней после этого не остаётся. Реферальные записи обезличиваются тем же образом.</li>
+  <li><strong>Резервные копии базы данных</strong> хранятся не более 14 дней и перезаписываются автоматически — удалённые данные исчезают из них в этот срок.</li>
+  <li>Видео- и PDF-файлы, которые вы сами сохранили на телефоне или отправили другим людям, находятся вне нашего контроля.</li>
+</ul>
+
+<h2>5. Удалить данные, но оставить аккаунт</h2>
+<p><strong>Настройки → Удалить все данные</strong> стирает всё перечисленное в разделе 3 и на телефоне, и на сервере, выходит из аккаунта, но сам аккаунт (email или Google-профиль в Firebase) сохраняется — им можно войти снова. Переписку с «Автоадвокатом» можно удалить отдельно прямо в чате.</p>
+
+<h2>6. Контакт</h2>
+<p>По вопросам удаления данных, отзыва согласия и обработки персональных данных: <a href="mailto:contactroadshield@gmail.com">contactroadshield@gmail.com</a></p>
+
+<div class="card">
+<h3>English summary — Account and data deletion</h3>
+<p><strong>In the app:</strong> Profile → Delete account → confirm your identity (Google sign-in or password) → Delete. Deletion is immediate and irreversible.</p>
+<p><strong>Without the app:</strong> email <a href="mailto:contactroadshield@gmail.com?subject=RoadShield%20account%20deletion">contactroadshield@gmail.com</a> from the address linked to your account with the subject “RoadShield account deletion”. We delete the account and its data within 30 calendar days and confirm by email.</p>
+<p><strong>What is deleted:</strong> server-side profile, display name and photo, friends, requests and blocks, “thanks”, your map markers, gamification progress, privacy settings, AI-lawyer chat history, consent log, cloud backups of stop history and trusted contacts, cloud copies of video recordings and PDF complaints; your Firebase Authentication identity (email / Google profile, user ID); and, when deleted from the app, local data on the device.</p>
+<p><strong>What is kept:</strong> anonymized statistics that cannot be linked to you; the Premium purchase record, detached from the account (no personal data remains) so the same receipt cannot be reused; database backups are overwritten within 14 days. <strong>Delete data but keep the account:</strong> Settings → Delete all data.</p>
+</div>
+
+<footer>
+  RoadShield — приложение для защиты прав водителей Республики Казахстан.
+</footer>
+
+</div>
+</body>
+</html>
