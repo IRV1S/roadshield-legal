@@ -107,7 +107,7 @@
   <div class="logo">RS</div>
   <h1>RoadShield</h1>
 </header>
-<p class="revision">Удаление аккаунта и данных · Редакция от 07.09.2026</p>
+<p class="revision">Удаление аккаунта и данных · Редакция от 08.09.2026</p>
 
 <p class="lang-note">Эта страница описывает, как удалить аккаунт RoadShield (пакет <code>kz.rightsdriver.app</code>) и связанные с ним данные. Полная Политика конфиденциальности — <a href="privacy-policy.html">здесь</a>. English summary is at the bottom of this page.</p>
 
@@ -135,7 +135,7 @@
 <h2>4. Что не удаляется и почему</h2>
 <ul>
   <li><strong>Обезличенная статистика</strong> — сведения, которые невозможно связать с вами (см. раздел 8 Политики конфиденциальности).</li>
-  <li><strong>Запись о покупке Premium</strong> — не удаляется, а отвязывается от аккаунта, чтобы один и тот же чек нельзя было применить повторно на другом аккаунте; сведений о вас в ней после этого не остаётся. Реферальные записи обезличиваются тем же образом.</li>
+  <li><strong>Запись о покупке Premium</strong> — не удаляется, а отвязывается от аккаунта, чтобы один и тот же чек нельзя было применить повторно на другом аккаунте; сведений о вас в ней после этого не остаётся. Реферальные записи обезличиваются тем же образом; в них остаётся необратимый отпечаток (SHA-256) адреса электронной почты приглашённого — чтобы бонус нельзя было получить повторно, удалив аккаунт и войдя заново.</li>
   <li><strong>Отпечатки для пробного периода Premium</strong> — необратимые отпечатки (SHA-256) идентификатора аккаунта и адреса электронной почты вместе с датами пробного периода не удаляются, чтобы пробный период не выдавался повторно. По отпечатку нельзя вычислить адрес, не зная его заранее, — он служит только для сверки.</li>
   <li><strong>Резервные копии базы данных</strong> хранятся не более 14 дней и перезаписываются автоматически — удалённые данные исчезают из них в этот срок.</li>
   <li>Видео- и PDF-файлы, которые вы сами сохранили на телефоне или отправили другим людям, находятся вне нашего контроля.</li>
@@ -152,7 +152,7 @@
 <p><strong>In the app:</strong> Profile → Delete account → confirm your identity (Google sign-in or password) → Delete. Deletion is immediate and irreversible.</p>
 <p><strong>Without the app:</strong> email <a href="mailto:contactroadshield@gmail.com?subject=RoadShield%20account%20deletion">contactroadshield@gmail.com</a> from the address linked to your account with the subject “RoadShield account deletion”. We delete the account and its data within 30 calendar days and confirm by email.</p>
 <p><strong>What is deleted:</strong> server-side profile, display name and photo, friends, requests and blocks, “thanks”, your map markers, gamification progress, privacy settings, AI-lawyer chat history, consent log, cloud backups of stop history and trusted contacts, cloud copies of video recordings and PDF complaints; your Firebase Authentication identity (email / Google profile, user ID); and, when deleted from the app, local data on the device.</p>
-<p><strong>What is kept:</strong> anonymized statistics that cannot be linked to you; the Premium purchase record, detached from the account (no personal data remains) so the same receipt cannot be reused; referral activation records, anonymised in the same way (your identifier is replaced by an irreversible SHA-256 fingerprint) so the same person cannot receive the bonus twice; the SHA-256 fingerprints of the account identifier and e-mail address together with the trial dates, so the free trial is not granted twice; database backups are overwritten within 14 days. <strong>Delete data but keep the account:</strong> Settings → Delete all data.</p>
+<p><strong>What is kept:</strong> anonymized statistics that cannot be linked to you; the Premium purchase record, detached from the account (no personal data remains) so the same receipt cannot be reused; referral activation records, anonymised in the same way (your identifier is replaced by an irreversible SHA-256 fingerprint; the fingerprint of the invited person's e-mail address is kept) so the same person cannot receive the bonus twice; the SHA-256 fingerprints of the account identifier and e-mail address together with the trial dates, so the free trial is not granted twice; database backups are overwritten within 14 days. <strong>Delete data but keep the account:</strong> Settings → Delete all data.</p>
 </div>
 
 <footer>
