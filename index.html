@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RoadShield — Поддержка</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #ffffff;
+    --fg: #1a1a1a;
+    --muted: #5a5a5a;
+    --accent: #2f6fed;
+    --card: #f5f6f8;
+    --border: #e2e4e8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14161a;
+      --fg: #eef0f2;
+      --muted: #a3a8b0;
+      --accent: #6ea0ff;
+      --card: #1d2025;
+      --border: #2a2d33;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 32px 20px 64px;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+  }
+  .logo {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: white;
+    flex-shrink: 0;
+  }
+  h1 {
+    font-size: 22px;
+    margin: 0;
+  }
+  .revision {
+    color: var(--muted);
+    font-size: 13px;
+    margin: 0 0 28px;
+  }
+  h2 {
+    font-size: 16px;
+    margin: 32px 0 10px;
+  }
+  h3 {
+    font-size: 15px;
+    margin: 20px 0 6px;
+  }
+  p, li {
+    font-size: 15px;
+  }
+  ul, ol {
+    margin: 8px 0;
+    padding-left: 22px;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin: 24px 0;
+  }
+  a { color: var(--accent); }
+  footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 13px;
+  }
+  .lang-note {
+    font-size: 13px;
+    color: var(--muted);
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="logo">RS</div>
+  <h1>RoadShield</h1>
+</header>
+<p class="revision">Поддержка · Редакция от 18.10.2026</p>
+
+<p class="lang-note">RoadShield — приложение для защиты прав водителей Республики Казахстан (пакет <code>kz.rightsdriver.app</code>, Android и iPhone). Разработчик — ИП IRVAGE, г. Алматы. Приложение не является государственным и не связано с МВД РК. English summary is at the bottom of this page.</p>
+
+<h2 id="contact">1. Как связаться</h2>
+<div class="card">
+<p>Почта поддержки: <a href="mailto:contactroadshield@gmail.com?subject=RoadShield%20support">contactroadshield@gmail.com</a></p>
+<p>Напишите, с какого телефона вы пользуетесь приложением (Android или iPhone), какая у вас версия (Настройки → О приложении) и что именно пошло не так. Если дело в аккаунте — пишите с той почты, которой входили. Отвечаем по почте.</p>
+</div>
+
+<h2 id="faq">2. Частые вопросы</h2>
+
+<h3>Приложение не записывает видео или запись без звука</h3>
+<p>Проверьте разрешения: на iPhone — Настройки → RoadShield → Камера и Микрофон; на Android — Настройки → Приложения → RoadShield → Разрешения. Запись идёт только с экрана приложения; на Android — также с виджета.</p>
+
+<h3>В записи нет координат</h3>
+<p>Координаты попадают в метаданные, только если выдано разрешение на точную геопозицию. На iPhone включите «Точная геопозиция» (Настройки → RoadShield → Геопозиция); на Android выберите «Точное» местоположение при запросе.</p>
+
+<h3>Как проверить, что запись не подменяли</h3>
+<p>У каждой записи в истории есть сертификат доказательства: хэш SHA-256 файла и цифровая подпись ключом, который не покидает телефон (Secure Enclave на iPhone, Android Keystore на Android). Инструкция по проверке — в самом сертификате.</p>
+
+<h3>Подписка Premium: отмена, возврат, восстановление</h3>
+<ul>
+  <li><strong>iPhone:</strong> подписка оформляется и отменяется через App Store (Настройки → Apple ID → Подписки). Возврат средств — по правилам Apple: <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>. После переустановки нажмите «Восстановить покупку» на экране Premium.</li>
+  <li><strong>Android:</strong> подписка оформляется и отменяется в Google Play (Платежи и подписки → Подписки). Возврат — по правилам Google Play. Покупка восстанавливается автоматически при входе на экран Premium.</li>
+</ul>
+<p>Мы не принимаем оплату вне магазинов и не видим данных вашей карты.</p>
+
+<h3>Как удалить аккаунт или данные</h3>
+<p>Внутри приложения: <strong>Профиль → Удалить аккаунт</strong> или <strong>Настройки → Удалить мои данные</strong>. Подробно, в том числе как удалить аккаунт без приложения, — на странице <a href="delete-account.html">Удаление аккаунта и данных</a>.</p>
+
+<h3>Какие данные собирает приложение</h3>
+<p>Смотрите Политику конфиденциальности: <a href="privacy-policy.html">редакция для Android</a>, <a href="privacy-policy-ios.html">редакция для iPhone</a>. Данные хранятся на серверах в Казахстане.</p>
+
+<h3>Тексты законов устарели или в них ошибка</h3>
+<p>Тексты КоАП, КоУП и ПДД приведены по официальным публикациям на <a href="https://adilet.zan.kz">adilet.zan.kz</a>. Если нашли расхождение — напишите нам номер статьи, исправим в ближайшем обновлении. Приложение — информационный инструмент, а не юридическая консультация.</p>
+
+<h2 id="legal">3. Документы</h2>
+<ul>
+  <li><a href="privacy-policy.html">Политика конфиденциальности (Android)</a></li>
+  <li><a href="privacy-policy-ios.html">Политика конфиденциальности (iPhone)</a></li>
+  <li><a href="delete-account.html">Удаление аккаунта и данных</a></li>
+</ul>
+<p>Условия использования открываются внутри приложения: Настройки → Условия использования.</p>
+
+<div class="card">
+<h3>English summary — Support</h3>
+<p><strong>Contact:</strong> <a href="mailto:contactroadshield@gmail.com?subject=RoadShield%20support">contactroadshield@gmail.com</a>. Tell us your platform (Android or iPhone), the app version (Settings → About) and what went wrong; for account matters write from the e-mail you signed in with.</p>
+<p><strong>Subscriptions:</strong> managed and cancelled in the App Store (iPhone) or Google Play (Android); refunds follow the store's rules. On iPhone use “Restore purchases” on the Premium screen after reinstalling.</p>
+<p><strong>Account and data deletion:</strong> Profile → Delete account, or Settings → Delete my data; details on the <a href="delete-account.html">deletion page</a>. <strong>Privacy:</strong> <a href="privacy-policy.html">Android policy</a>, <a href="privacy-policy-ios.html">iPhone policy</a>.</p>
+<p>RoadShield is made by a private developer (IE IRVAGE, Almaty, Kazakhstan) and is not affiliated with any state body. It is an informational tool, not legal advice.</p>
+</div>
+
+<footer>
+  RoadShield — приложение для защиты прав водителей Республики Казахстан.
+</footer>
+
+</div>
+</body>
+</html>
